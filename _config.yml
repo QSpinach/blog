@@ -91,4 +91,4 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/QSpinach/blog
-  branch: master
+  branch: gh-pages
