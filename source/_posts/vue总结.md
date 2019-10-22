@@ -1,3 +1,11 @@
+---
+tags: [Vue]
+comments: true
+toc: true
+---
+
+
+
 ### 问题
 
 #### 1、vue缓存页面使用
