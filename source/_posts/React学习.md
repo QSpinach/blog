@@ -409,8 +409,7 @@ this.setState({
 ```
 
 ### 生命周期 
-
-![react](.\react.png)
+![](react.png "react周期图")
 
 - Mounting：已插入真实DOM
 
