@@ -1,4 +1,13 @@
+---
+tags: [Mysql]
+comments: true
+toc: true
+---
+
+
+
 ### -----设置默认值
+
 若本身存在默认值，则先删除
 alter table表名alter column字段名drop default; 
 然后设置默认值（若本身不存在则可以直接设定）

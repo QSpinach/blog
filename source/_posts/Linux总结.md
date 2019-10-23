@@ -1,3 +1,11 @@
+---
+tags: [Linux]
+comments: true
+toc: true
+---
+
+
+
 ### 命令
 
 ```
@@ -249,7 +257,7 @@ window使用shadowsocks
 	sudo apt-get install mysql-server
 	sudo apt isntall mysql-client
 	sudo apt install libmysqlclient-dev
-```
+  ```
   启动service mysql start
 
   关闭service mysql stop
@@ -338,7 +346,7 @@ change jdk version for the default site
 /yjdata/www/www/change_jdk_version.sh 1.6|1.7|1.8
 
 ======================================================================
-*** 
+***
 netstat -ntlp //查看当前所有tcp端口·
 
 netstat -ntulp |grep 80 //查看所有80端口使用情况·

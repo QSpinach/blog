@@ -1,4 +1,13 @@
+---
+tags: [Git]
+comments: true
+toc: true
+---
+
+
+
 ### git命令
+
 git init 初始化
 git status 状况
 git add .添加

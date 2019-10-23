@@ -1,4 +1,13 @@
+---
+tags: [js]
+comments: true
+toc: true
+---
+
+
+
 #### reduce 问题
+
 在ie下会出现Uint8Array 无法使用reduce方法，原因ie下Uint8Array不是一个数组集合而是一个对象集合
 解决方法：使用lodash中的reduce，即可兼容Array|Object
 

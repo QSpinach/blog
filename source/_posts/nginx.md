@@ -1,4 +1,13 @@
+---
+tags: [Nginx]
+comments: true
+toc: true
+---
+
+
+
 ### nginx配置前端打包后的代码----------------------------------
+
 server {
 	listen 		  8000;
 	server_name	  localhost;
