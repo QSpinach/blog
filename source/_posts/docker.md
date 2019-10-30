@@ -44,8 +44,11 @@ docker build -t 镜像名 .
 ```
 
 ### 运行容器
+
+将容器中的8000端口映射到服务器80端口
+
 ```sh
-docker run -it --name 容器名 -p 80:80 镜像id
+docker run -it --name 容器名 -p 8000:80 镜像id
 ```
 
 ### 查看日志
