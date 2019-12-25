@@ -60,9 +60,9 @@ mysqld_safe --user=mysql --skip-grant-tables --skip-networking &
 mysql -u root mysql
 
 #4.更新root密码
-mysql> UPDATE user SET Password=PASSWORD('shenyanqiu123') where USER='root';
+mysql> UPDATE user SET Password=PASSWORD('xxx123') where USER='root';
 #最新版MySQL请采用如下SQL：
-mysql> UPDATE user SET authentication_string=PASSWORD('shenyanqiu123') where USER='root';
+mysql> UPDATE user SET authentication_string=PASSWORD('xxx123') where USER='root';
 
 #5.刷新权限 
 mysql> FLUSH PRIVILEGES;
