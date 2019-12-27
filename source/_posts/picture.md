@@ -5,4 +5,6 @@ tags: [picture]
 comments: true
 ---
 
+转载图片请说明出处
+
 ![](IMG_20191130_084601.jpg "图片1")

@@ -1,3 +1,9 @@
+---
+tags: [Vue]
+comments: true
+toc: true
+---
+
 # 搭建VUE项目
 
 ### 概要
