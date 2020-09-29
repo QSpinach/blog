@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>js总结 | QSpinach&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="js">
+    <meta name="description" content="reduce 问题在ie下会出现Uint8Array 无法使用reduce方法，原因ie下Uint8Array不是一个数组集合而是一个对象集合解决方法：使用lodash中的reduce，即可兼容Array|Object ============================================================== 获取json对象的键和值var data = {a:">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js总结">
+<meta property="og:url" content="https:&#x2F;&#x2F;qspinach.github.io&#x2F;blog&#x2F;2020&#x2F;08&#x2F;23&#x2F;js%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="QSpinach&#39;blog">
+<meta property="og:description" content="reduce 问题在ie下会出现Uint8Array 无法使用reduce方法，原因ie下Uint8Array不是一个数组集合而是一个对象集合解决方法：使用lodash中的reduce，即可兼容Array|Object ============================================================== 获取json对象的键和值var data = {a:">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-23T15:45:11.793Z">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="QSpinach&#39;blog" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">QSpinach</h5>
+          <a href="mailto:731044462@qq.com" target="_blank" rel="noopener" title="731044462@qq.com" class="mail">731044462@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qspinach" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">js总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">js总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-08-23T15:45:11.793Z" itemprop="datePublished" class="page-time">
+  2020-08-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#reduce-问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">reduce 问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取json对象的键和值"><span class="post-toc-number">2.</span> <span class="post-toc-text">获取json对象的键和值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vscode-修饰报错-修改setting"><span class="post-toc-number">3.</span> <span class="post-toc-text">vscode 修饰报错 修改setting</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态栏"><span class="post-toc-number">4.</span> <span class="post-toc-text">状态栏</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#盗链问题"><span class="post-toc-number">5.</span> <span class="post-toc-text">盗链问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#锚对象"><span class="post-toc-number">6.</span> <span class="post-toc-text">锚对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#历史对象"><span class="post-toc-number">7.</span> <span class="post-toc-text">历史对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#华氏温度和摄氏温度"><span class="post-toc-number">8.</span> <span class="post-toc-text">华氏温度和摄氏温度</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据类型转换"><span class="post-toc-number">9.</span> <span class="post-toc-text">数据类型转换</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#阶乘"><span class="post-toc-number">10.</span> <span class="post-toc-text">阶乘</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在一个字符串中查找另一个字符串"><span class="post-toc-number">11.</span> <span class="post-toc-text">在一个字符串中查找另一个字符串</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制字符串的一个子串"><span class="post-toc-number">12.</span> <span class="post-toc-text">复制字符串的一个子串</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#转换大小写"><span class="post-toc-number">13.</span> <span class="post-toc-text">转换大小写</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#将字符编码转换为字符串-fromCharCode-方法"><span class="post-toc-number">14.</span> <span class="post-toc-text">将字符编码转换为字符串 fromCharCode()方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#slice-方法，复制数组的部分"><span class="post-toc-number">15.</span> <span class="post-toc-text">slice()方法，复制数组的部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#join-将数组转换为字符串"><span class="post-toc-number">16.</span> <span class="post-toc-text">join()将数组转换为字符串</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#按字母排序"><span class="post-toc-number">17.</span> <span class="post-toc-text">按字母排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#reverse-方法，反转数组元素的顺序"><span class="post-toc-number">18.</span> <span class="post-toc-text">reverse()方法，反转数组元素的顺序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#测试元素"><span class="post-toc-number">19.</span> <span class="post-toc-text">测试元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#abs-返回所传入的绝对值"><span class="post-toc-number">20.</span> <span class="post-toc-text">abs();返回所传入的绝对值</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-js总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">js总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-08-23 23:45:11" datetime="2020-08-23T15:45:11.793Z"  itemprop="datePublished">2020-08-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="reduce-问题"><a href="#reduce-问题" class="headerlink" title="reduce 问题"></a>reduce 问题</h4><p>在ie下会出现Uint8Array 无法使用reduce方法，原因ie下Uint8Array不是一个数组集合而是一个对象集合<br>解决方法：使用lodash中的reduce，即可兼容Array|Object</p>
+<p>==============================================================</p>
+<h4 id="获取json对象的键和值"><a href="#获取json对象的键和值" class="headerlink" title="获取json对象的键和值"></a>获取json对象的键和值</h4><p>var data = {a: 1, b: 2, c: 3, d: 4}<br>Object.keys(data);  // [“a”, “b”, “c”, “d”]<br>Object.values(data);    // [1, 2, 3, 4]</p>
+<p>==============================================================</p>
+<h4 id="vscode-修饰报错-修改setting"><a href="#vscode-修饰报错-修改setting" class="headerlink" title="vscode 修饰报错 修改setting"></a>vscode 修饰报错 修改setting</h4><p>“javascript.implicitProjectConfig.experimentalDecorators”: true</p>
+<p>==============================================================</p>
+<h4 id="状态栏"><a href="#状态栏" class="headerlink" title="状态栏"></a>状态栏</h4><p>window对象的defaultStatus<br>状态栏显示时间<br>d = new Date();<br>time = d.getHours();<br>window.status = time;</p>
+<h4 id="盗链问题"><a href="#盗链问题" class="headerlink" title="盗链问题"></a>盗链问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var frontURL = document.referrer;</span><br><span class="line">var host = location.hostname;</span><br><span class="line">if(frontURL != &quot;&quot;)&#123;</span><br><span class="line">	var frontHost = frontURL.substring(7.host.length + 7)</span><br><span class="line">	if(host == frontHost)&#123;</span><br><span class="line">		alert(&quot;没有盗链&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123;</span><br><span class="line">		alert(&quot;非法盗链&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	alert(&quot;你是直接打开文档的&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="锚对象"><a href="#锚对象" class="headerlink" title="锚对象"></a>锚对象</h4><p>window.document.anchors</p>
+<h4 id="历史对象"><a href="#历史对象" class="headerlink" title="历史对象"></a>历史对象</h4><p>history.go(n)<br>n=0表示载入当前页面，n&gt;0表示载入历史列表中往前数第n个页面,n&lt;0表示载入历史列表中的往后数第n个页面</p>
+<h4 id="华氏温度和摄氏温度"><a href="#华氏温度和摄氏温度" class="headerlink" title="华氏温度和摄氏温度"></a>华氏温度和摄氏温度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var degFahren = prompt(&quot;Enter the degrees in Fahrenheit&quot;,50);</span><br><span class="line">var degCent;</span><br><span class="line">degCent = 5/9*(degFahren-32);</span><br><span class="line">alert(degCent);</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">parseInt();</span><br><span class="line">parseFloat();</span><br><span class="line">for...in循环,无需知道数组的元素的个数</span><br><span class="line">var elementIndex;</span><br><span class="line">for(elementIndex in myArray)&#123;</span><br><span class="line">	document.write(myArray[elementIndex]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="阶乘"><a href="#阶乘" class="headerlink" title="阶乘"></a>阶乘</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calcFactorial(num);</span><br></pre></td></tr></table></figure>
+
+<h4 id="在一个字符串中查找另一个字符串"><a href="#在一个字符串中查找另一个字符串" class="headerlink" title="在一个字符串中查找另一个字符串"></a>在一个字符串中查找另一个字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">indexOf();</span><br></pre></td></tr></table></figure>
+
+<h4 id="复制字符串的一个子串"><a href="#复制字符串的一个子串" class="headerlink" title="复制字符串的一个子串"></a>复制字符串的一个子串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myString = &quot;JavaScript&quot;;</span><br><span class="line">var mySubString = myString.substring(0,4);</span><br></pre></td></tr></table></figure>
+
+<h4 id="转换大小写"><a href="#转换大小写" class="headerlink" title="转换大小写"></a>转换大小写</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toLowerCase()和toUpperCase()</span><br></pre></td></tr></table></figure>
+
+<h4 id="将字符编码转换为字符串-fromCharCode-方法"><a href="#将字符编码转换为字符串-fromCharCode-方法" class="headerlink" title="将字符编码转换为字符串 fromCharCode()方法"></a>将字符编码转换为字符串 fromCharCode()方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var myString = String.fromCharCode(65,66,67);</span><br></pre></td></tr></table></figure>
+
+<h4 id="slice-方法，复制数组的部分"><a href="#slice-方法，复制数组的部分" class="headerlink" title="slice()方法，复制数组的部分"></a>slice()方法，复制数组的部分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var names = new Array(&quot;Eggs&quot;,&quot;Milks&quot;,&quot;Potatoes&quot;);</span><br><span class="line">var slicedArray = names.slice(1,3);</span><br></pre></td></tr></table></figure>
+
+<h4 id="join-将数组转换为字符串"><a href="#join-将数组转换为字符串" class="headerlink" title="join()将数组转换为字符串"></a>join()将数组转换为字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myShopping = new Array(&quot;Eggs&quot;,&quot;Milks&quot;,&quot;Potatoes&quot;);</span><br><span class="line">var myShooingList = myShopping.join(&quot;&lt;br/&gt;&quot;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="按字母排序"><a href="#按字母排序" class="headerlink" title="按字母排序"></a>按字母排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var names = new Array(&quot;Eggs&quot;,&quot;Milks&quot;,&quot;Potatoes&quot;);</span><br><span class="line">names.sort();</span><br></pre></td></tr></table></figure>
+
+<h4 id="reverse-方法，反转数组元素的顺序"><a href="#reverse-方法，反转数组元素的顺序" class="headerlink" title="reverse()方法，反转数组元素的顺序"></a>reverse()方法，反转数组元素的顺序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myShopping = new Array(&quot;Eggs&quot;,&quot;Milks&quot;,&quot;Potatoes&quot;);</span><br><span class="line">myShopping.reverse();</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试元素"><a href="#测试元素" class="headerlink" title="测试元素"></a>测试元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">every();some();filter();</span><br><span class="line">var num = new Array(1,2,3);</span><br><span class="line">function Test()&#123;&#125;</span><br><span class="line">every(Test);</span><br></pre></td></tr></table></figure>
+
+<h4 id="abs-返回所传入的绝对值"><a href="#abs-返回所传入的绝对值" class="headerlink" title="abs();返回所传入的绝对值"></a>abs();返回所传入的绝对值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myNumber = -101;</span><br><span class="line">document.write(Math.abs(myNumber));</span><br></pre></td></tr></table></figure>
+
+<p>ceil();修整到最接近的最小整数，即向上修整<br>floor();舍去小数部分<br>round();大于等于0.5向上修整，小于等于0.5向下修整</p>
+<p>正则表达式<br>“g”表示全局标志</p>
+<hr>
+<p>***select改变值事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select.onchange = function()&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>*添加删除数组<br>    push()后面推进去<br>       向数组的末尾添加一个或多个元素，并返回新的长度。<br>    unshift()从数组的前面放入<br>       向数组的开头添加一个或更多元素，并返回新的长度<br>    pop() 删除最后一个数组元素<br>    shift()删除第一个数组元素<br>*</strong>数组和字符串转换<br>    join()将数组转换为字符串<br>    split()将字符串转换为数组<br><strong>*插入子节点<br>    1. appendChild();    添加孩子     append 添加的意思<br>        意思：  添加孩子   放到盒子的 最后面。<br>    2. insertBefore(插入的节点，参照节点)   子节点  添加孩子<br>*</strong>克隆节点<br>    cloneNode();<br>    括号里面可以跟参数  ， 如果 里面是 true  深层复制， 除了复制本盒子，还复制子节点<br>    如果为 false  浅层复制   只复制   本节点  不复制 子节点。</p>
+<p><strong>**</strong>url编码和解码<br>    encodeURIComponent()函数可把字符串作为URI组件进行编码<br>    decodeURIComponent()函数可把字符串作为URI组件进行解码<br><strong>**</strong>substr()<br>    substr(起始位置,[取的个数])<br>    同上。<br>  不写取的个数， 默认从起始位置一直取到最后 。<br>  取的个数：    是指从起始位置开始，往后面数几个。</p>
+<p><strong>***</strong>offset家族<br>    offsetWidth  offsetHeight<br>    得到对象的宽度和高度(自己的，与他人无关) offsetWidth =  width  + border  +  padding<br>    offsetLeft   offsetTop<br>    返回距离上级盒子（最近的带有定位）左边的位置</p>
+<p><strong>**</strong>offsetTop<br>    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;<br><strong>**</strong>client<br>    clientX          clientWidth   可视区域的宽度<br>    clientWidth     width  +  padding<br>    offsetWidth     width + padding + border<br>    scrollWidth     width + padding      超过  内容的宽度<br><strong>**</strong>Math<br>    Math.ceil(); 向上取整<br>    Math.floor();向下取整<br>    Math.round();四舍五入<br><strong>**</strong>获取css样式<br>     1.   obj.currentStyle   ie  opera  常用<br>        外部（使用<link>）和内嵌（使用<style>）样式表中的样式（ie和opera）<br>     2 .window.getComputedStyle(“元素”, “伪类”)     w3c 两个选项是必须的， 没有伪类 用 null 替代<br>     3.兼容<br>     function getStyle(obj,attr) {<br>        if (obj.currentStyle) {<br>            return obj.currentStyle[attr];<br>        } else {<br>            return window.getComputedStyle(obj,null)[attr];<br>        }<br>      }<br><strong>***</strong>in运算符<br>    in运算符也是一个二元运算符，但是对运算符左右两个操作数的要求比较严格。<br>    in运算符要求第1个（左边的）操作数必须是字符串类型或可以转换为字符串类型的其他类型，<br>    而第2个（右边的）操作数必须是数组或对象。只有第1个操作数的值是第2个操作数的属性名，<br>    才会返回true，否则返回false</p>
+<hr>
+<h4 id="js-内置对象："><a href="#js-内置对象：" class="headerlink" title="js 内置对象："></a>js 内置对象：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">String </span><br><span class="line">Date</span><br><span class="line">Math</span><br><span class="line">Array</span><br><span class="line">RegExp</span><br><span class="line">Number</span><br><span class="line">Object</span><br><span class="line">Function</span><br><span class="line">Null</span><br><span class="line">Boolean</span><br><span class="line">Error</span><br><span class="line">Cookie</span><br><span class="line">Session</span><br></pre></td></tr></table></figure>
+
+<h4 id="Js-Bom对象"><a href="#Js-Bom对象" class="headerlink" title="Js Bom对象"></a>Js Bom对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Window</span><br><span class="line">Document</span><br><span class="line">History</span><br><span class="line">Location</span><br><span class="line">Screen</span><br><span class="line">Navigator</span><br></pre></td></tr></table></figure>
+
+<h4 id="将伪数组转化为数组"><a href="#将伪数组转化为数组" class="headerlink" title="将伪数组转化为数组"></a>将伪数组转化为数组</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var json = &#123;0:&apos;first&apos;,1:&apos;second&apos;,length:2&#125;;</span><br><span class="line">Array.prototype.slice.call(json);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="写一个通用的事件侦听器函数"><a href="#写一个通用的事件侦听器函数" class="headerlink" title="写一个通用的事件侦听器函数"></a>写一个通用的事件侦听器函数</h4><p>// event(事件)工具集，来源：github.com/markyun</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">markyun.Event = &#123;</span><br><span class="line">    // 页面加载完成后</span><br><span class="line">    readyEvent : function(fn) &#123;</span><br><span class="line">        if (fn==null) &#123;</span><br><span class="line">            fn=document;</span><br><span class="line">        &#125;</span><br><span class="line">        var oldonload = window.onload;</span><br><span class="line">        if (typeof window.onload != &apos;function&apos;) &#123;</span><br><span class="line">            window.onload = fn;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            window.onload = function() &#123;</span><br><span class="line">                oldonload();</span><br><span class="line">                fn();</span><br><span class="line">            &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 视能力分别使用dom0||dom2||IE方式 来绑定事件</span><br><span class="line">    // 参数： 操作的元素,事件名称 ,事件处理程序</span><br><span class="line">    addEvent : function(element, type, handler) &#123;</span><br><span class="line">        if (element.addEventListener) &#123;</span><br><span class="line">            //事件类型、需要执行的函数、是否捕捉</span><br><span class="line">            element.addEventListener(type, handler, false);</span><br><span class="line">        &#125; else if (element.attachEvent) &#123;</span><br><span class="line">            element.attachEvent(&apos;on&apos; + type, function() &#123;</span><br><span class="line">                handler.call(element);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            element[&apos;on&apos; + type] = handler;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 移除事件</span><br><span class="line">    removeEvent : function(element, type, handler) &#123;</span><br><span class="line">        if (element.removeEnentListener) &#123;</span><br><span class="line">            element.removeEnentListener(type, handler, false);</span><br><span class="line">        &#125; else if (element.detachEvent) &#123;</span><br><span class="line">            element.detachEvent(&apos;on&apos; + type, handler);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            element[&apos;on&apos; + type] = null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, </span><br><span class="line">    // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)</span><br><span class="line">    stopPropagation : function(ev) &#123;</span><br><span class="line">        if (ev.stopPropagation) &#123;</span><br><span class="line">            ev.stopPropagation();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            ev.cancelBubble = true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 取消事件的默认行为</span><br><span class="line">    preventDefault : function(event) &#123;</span><br><span class="line">        if (event.preventDefault) &#123;</span><br><span class="line">            event.preventDefault();</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            event.returnValue = false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 获取事件目标</span><br><span class="line">    getTarget : function(event) &#123;</span><br><span class="line">        return event.target || event.srcElement;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；</span><br><span class="line">    getEvent : function(e) &#123;</span><br><span class="line">        var ev = e || window.event;</span><br><span class="line">        if (!ev) &#123;</span><br><span class="line">            var c = this.getEvent.caller;</span><br><span class="line">            while (c) &#123;</span><br><span class="line">                ev = c.arguments[0];</span><br><span class="line">                if (ev &amp;&amp; Event == ev.constructor) &#123;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                c = c.caller;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Ajax 是什么？Ajax 的交互模型？同步和异步的区别？如何解决跨域问题？<br>Ajax 是什么：</p>
+<ol>
+<li>通过异步模式，提升了用户体验</li>
+<li>优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用</li>
+<li>Ajax 在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载。</li>
+</ol>
+<p>Ajax 的最大的特点：</p>
+<ol>
+<li>Ajax可以实现动态不刷新（局部刷新）</li>
+<li>readyState 属性 状态 有5个可取值： 0 = 未初始化，1 = 启动， 2 = 发送，3 = 接收，4 = 完成</li>
+</ol>
+<p>Ajax 同步和异步的区别:</p>
+<ol>
+<li>同步：提交请求 -&gt; 等待服务器处理 -&gt; 处理完毕返回，这个期间客户端浏览器不能干任何事</li>
+<li>异步：请求通过事件触发 -&gt; 服务器处理（这是浏览器仍然可以作其他事情）-&gt; 处理完毕<br>ajax.open方法中，第3个参数是设同步或者异步。</li>
+</ol>
+<p>Ajax 的缺点：</p>
+<ol>
+<li>Ajax 不支持浏览器 back 按钮</li>
+<li>安全问题 Ajax 暴露了与服务器交互的细节</li>
+<li>对搜索引擎的支持比较弱</li>
+<li>破坏了程序的异常机制</li>
+<li>不容易调试</li>
+</ol>
+<p>解决跨域问题：</p>
+<ol>
+<li>jsonp</li>
+<li>iframe</li>
+<li>window.name、window.postMessage</li>
+<li>服务器上设置代理页面</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">*************************************</span><br><span class="line"></span><br><span class="line">function whatBrowser() &#123;  </span><br><span class="line">    document.Browser.Name.value=navigator.appName;  </span><br><span class="line">    document.Browser.Version.value=navigator.appVersion;  </span><br><span class="line">    document.Browser.Code.value=navigator.appCodeName;  </span><br><span class="line">    document.Browser.Agent.value=navigator.userAgent;  </span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">* 智能获取浏览器版本信息</span><br><span class="line">*</span><br><span class="line">*/</span><br><span class="line">var browser=&#123;</span><br><span class="line">    versions:function()&#123;</span><br><span class="line">    var u = navigator.userAgent, app = navigator.appVersion;</span><br><span class="line">    return &#123;//移动终端浏览器版本信息</span><br><span class="line">      trident: u.indexOf(&apos;Trident&apos;) &gt; -1, //IE内核</span><br><span class="line">      presto: u.indexOf(&apos;Presto&apos;) &gt; -1, //opera内核</span><br><span class="line">      webKit: u.indexOf(&apos;AppleWebKit&apos;) &gt; -1, //苹果、谷歌内核</span><br><span class="line">      gecko: u.indexOf(&apos;Gecko&apos;) &gt; -1 &amp;&amp; u.indexOf(&apos;KHTML&apos;) == -1, //火狐内核</span><br><span class="line">      mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端</span><br><span class="line">      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端</span><br><span class="line">      android: u.indexOf(&apos;Android&apos;) &gt; -1 || u.indexOf(&apos;Linux&apos;) &gt; -1, //android终端或者uc浏览器</span><br><span class="line">      iPhone: u.indexOf(&apos;iPhone&apos;) &gt; -1 || u.indexOf(&apos;Mac&apos;) &gt; -1, //是否为iPhone或者QQHD浏览器</span><br><span class="line">      iPad: u.indexOf(&apos;iPad&apos;) &gt; -1, //是否iPad</span><br><span class="line">      webApp: u.indexOf(&apos;Safari&apos;) == -1 //是否web应该程序，没有头部与底部</span><br><span class="line">    &#125;;</span><br><span class="line">   &#125;(),</span><br><span class="line">   language:(navigator.browserLanguage || navigator.language).toLowerCase()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><strong><strong>****</strong></strong></strong>状态码<br>100 Continue  继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息<br>200 OK   正常返回信息<br>201 Created  请求成功并且服务器创建了新的资源<br>202 Accepted  服务器已接受请求，但尚未处理<br>301 Moved Permanently  请求的网页已永久移动到新位置<br>302 Found  临时性重定向<br>303 See Other  临时性重定向，且总是使用 GET 请求新的 URI<br>304 Not Modified  自从上次请求后，请求的网页未修改过<br>400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求<br>401 Unauthorized  请求未授权<br>403 Forbidden  禁止访问<br>404 Not Found  找不到如何与 URI 相匹配的资源<br>500 Internal Server Error  最常见的服务器端错误<br>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）</p>
+<p><strong><strong><strong><strong><strong>**</strong></strong></strong></strong></strong>js 操作获取和设置 cookie<br>// 创建cookie</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function setCookie(name, value, expires, path, domain, secure) &#123;</span><br><span class="line">    var cookieText = encodeURIComponent(name) + &apos;=&apos; + encodeURIComponent(value);</span><br><span class="line">    if (expires instanceof Date) &#123;</span><br><span class="line">        cookieText += &apos;; expires=&apos; + expires;</span><br><span class="line">    &#125;</span><br><span class="line">    if (path) &#123;</span><br><span class="line">        cookieText += &quot;; path=&quot; + path     &#125;</span><br><span class="line">    if (domain) &#123;</span><br><span class="line">        cookieText += &apos;; domain=&apos; + domain;</span><br><span class="line">    &#125;</span><br><span class="line">    if (secure) &#123;</span><br><span class="line">        cookieText += &apos;; secure&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    document.cookie = cookieText;</span><br><span class="line">&#125;</span><br><span class="line">// 获取cookie</span><br><span class="line">function getCookie(name) &#123;</span><br><span class="line">    var cookieName = encodeURIComponent(name) + &apos;=&apos;;</span><br><span class="line">    var cookieStart = document.cookie.indexOf(cookieName);</span><br><span class="line">    var cookieValue = null;</span><br><span class="line">    if (cookieStart &gt; -1) &#123;</span><br><span class="line">        var cookieEnd = document.cookie.indexOf(&apos;;&apos;, cookieStart);</span><br><span class="line">        if (cookieEnd == -1) &#123;</span><br><span class="line">            cookieEnd = document.cookie.length;</span><br><span class="line">        &#125;</span><br><span class="line">        cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));</span><br><span class="line">    &#125;</span><br><span class="line">    return cookieValue;</span><br><span class="line">&#125;</span><br><span class="line">// 删除cookie</span><br><span class="line">function unsetCookie(name) &#123;</span><br><span class="line">    document.cookie = name + &quot;= ; expires=&quot; + new Date(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<pre><code>ES6</code></pre><hr>
+<p>—-模板字符串：<br>    let apple = “苹果”;<br>    let coffee = “咖啡”;<br>    let = kitChen<code>今天的早餐是${apple} 与 ${coffee} !</code>;<br>    function kitChen(strings, …values) {<br>    console.log(strings); // [“今天的早餐是”, “与”, “!”, raw: Array[3]]<br>    consloe.log(values);  // [“苹果”, “咖啡”]<br>    }</p>
+<p>—-新字符串方法<br>    let breakfast = “今天早餐是什么？”;<br>    console.log(breakfast.startsWith(“今天”)); // true 判断以什么开头<br>    console.log(breakfast.endsWith(“!”)); // false 判断以什么结尾<br>    console.log(breakfast.includes(“?”)); // true 判断是否包含</p>
+<p>—-设置函数默认参数<br>    function breakfast(coke = “蛋糕”, drink = “果汁”) {<br>    return <code>${coke} , ${drink}</code>;<br>    }<br>    console.log(breakfast());</p>
+<p>—-展开操作符<br>    let fruits = [“苹果”, “香蕉”],<br>    foods = [“橘子”, …fruits];<br>    console.log(foods); // [“橘子”, “苹果”, “香蕉”]</p>
+<p>—-函数name<br>    let breakfast = function(){}<br>    console.log(breakfast.name); // breakfast<br>    let breakfast = function superBreakfast(){}<br>    console.log(breakfast.name); // superBreakfast</p>
+<p>—-判断两个值是否相等<br>    Object.is(NaN, NaN); // true<br>    Object.is(+0, -0); // false</p>
+<p>—-把一个对象值复制到另一个对象<br>    let breakfast = {};<br>    breakfast.assgin(breakfast, {drink: “啤酒”})</p>
+<p>—-设置对象的prototype<br>    let breakfast = { getDrink(){ return “果汁”; }};<br>    let dinner = { getDrink(){ return “啤酒”;}};<br>    let sunday = Object.create(breakfast); // 基于breakfast创建的对象<br>    console.log(Object.getPrototypeOf(sunday) === breakfast); // true<br>    Object.setProtytypeOf(sunday, dinner); ****<br>    console.log(Object.getPrototypeOf(sunday) === dinner); // true</p>
+<p>—- <strong>proto</strong><br>    let breakfast = { getDrink(){ return “果汁”; }};<br>    let dinner = { getDrink(){ return “啤酒”;}};<br>    let sunday = { <strong>proto</strong>: breakfast };<br>    console.log(Object.getPrototypeOf(sunday) === breakfast); // true<br>    sunday.<strong>proto</strong> = dinner;<br>    console.log(Object.getPrototypeOf(sunday) === dinner); // true</p>
+<p>—-super<br>    let breakfast = { getDrink(){ return “果汁”; }};<br>    let dinner = { getDrink(){ return “啤酒”;}};<br>    let sunday = { <strong>proto</strong>: breakfast, getDrink(){ return super.getDrink() + “牛奶”; } };<br>    console.log(sunday.getDrink()); // “果汁牛奶”</p>
+<hr>
+<p>问题：判断select选择情况</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#demo&quot;).change(function () &#123;</span><br><span class="line">    var val = $(this).val();</span><br><span class="line">    var res = confirm(&quot;您确认修改为&quot;+val+&quot;么？&quot;);</span><br><span class="line">    if(res == true)&#123;</span><br><span class="line">        //确认</span><br><span class="line">        $(this).attr(&quot;hook&quot;,val);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        //取消</span><br><span class="line">        if(typeof $(this).attr(&quot;hook&quot;) == &quot;undefined&quot;)&#123;</span><br><span class="line">            //尚未做过选择，重置为默认选择</span><br><span class="line">            $(this).val($(this).children(&quot;option:first-child&quot;).val());</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            //重置为修改之前的选择</span><br><span class="line">            $(this).val($(this).attr(&quot;hook&quot;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>时间format</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//格式化CST日期的字串</span><br><span class="line">function formatCSTDate(strDate, format) &#123;</span><br><span class="line">    return formatDate(new Date(strDate), format);</span><br><span class="line">&#125;</span><br><span class="line">//格式化日期</span><br><span class="line">function formatDate(date, format) &#123;</span><br><span class="line">    var paddNum = function (num) &#123;</span><br><span class="line">        num += &quot;&quot;;</span><br><span class="line">        return num.replace(/^(\d)$/, &quot;0$1&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //指定格式字符</span><br><span class="line">    var cfg = &#123;</span><br><span class="line">        yyyy: date.getFullYear() //年 : 4位</span><br><span class="line">        , yy: date.getFullYear().toString().substring(2)//年 : 2位</span><br><span class="line">        , M: date.getMonth() + 1  //月 : 如果1位的时候不补0</span><br><span class="line">        , MM: paddNum(date.getMonth() + 1) //月 : 如果1位的时候补0</span><br><span class="line">        , d: date.getDate()   //日 : 如果1位的时候不补0</span><br><span class="line">        , dd: paddNum(date.getDate())//日 : 如果1位的时候补0</span><br><span class="line">        , hh: date.getHours()  //时</span><br><span class="line">        , mm: date.getMinutes() //分</span><br><span class="line">        , ss: date.getSeconds() //秒</span><br><span class="line">    &#125;</span><br><span class="line">    format || (format = &quot;yyyy-MM-dd hh:mm:ss&quot;);</span><br><span class="line">    return format.replace(/([a-z])(\1)*/ig, function (m) &#123;</span><br><span class="line">        return cfg[m];</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-08-23T15:45:11.793Z" itemprop="dateUpdated">2020-08-23 23:45:11</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://qspinach.github.io/blog">
+            <img src="/blog/img/avatar.jpg" alt="QSpinach">
+            QSpinach
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/js/" rel="tag">js</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&title=《js总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&title=《js总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2020/08/23/hexo/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hexo</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2020/08/23/npm%20or%20yarn/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">npm or yarn</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>QSpinach &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&title=《js总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&title=《js总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/js%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACxElEQVR42u3a247iMBAEUP7/p9nXkZYJVd0xy0onT0hc4mMk26nuxyO+nj+u5N3n4vr5C3/f5XHiwsPDw1sM/fpm17e8xueDzu91PWY8PDy807zZsK4X9Hyarn9zNpV4eHh438NLjrabIebThIeHh/e/8JKNIdkw8oPy1+17eHh4eOtQNTk6b2KOD2UteHh4eDEvryJ9z+sj9T08PDy8dVU9X8pvOPiuGw5ejBYPDw/vAG8Ty+ZDbyOGvJkgio/x8PDwDvDyCKBtltpsIbPt6s0fhoeHh7fm5UFtPqA2JciX/iQUfmyGi4eHhxdXha4/1Jad2kHPhl5MEB4eHt5hXhIHtOFsXp9K8MPaHR4eHt6tvP3SPNs8ZlOZN3Lh4eHhneAd7NK6Kcadrfz37Sd4eHh4z6rFP9lP8i0hbwjI2xTePBLg4eHhHePlS20bScxi3Fk57cUd8fDw8D7CazeJWQS8uZLoGQ8PD+8cbzbQ5HXeWHBXDevXX8PDw8O7lZcvvu3BN8EnsW8eDb/4Lh4eHt4BXts0sAl820arNqp48x/i4eHh3cprC0v50DfbRj7FeHh4eJ/n5Yfp5JP5UXhGKpqu8PDw8A7z2gAiD3nzQ3MS+ybjiZ4Y8PDw8Na8/IG/jQPasLh9Angzcjw8PLzDvIS0CXOTeGLTOhBV+fDw8PBu4rXlpTYy2EzTquiFh4eH93FefvxtGxFmLVn1d/Hw8PCO8drOgtlS3sYfbUsWHh4e3mnes7xmpaxh4Soukv36Lh4eHt4B3qy03x6Xrw/c+UG8fY2Hh4d3jteWsnLqbCmfRRvDgzUeHh7egpc/5Of44QG33MGijQEPDw/vn/Lyb9UNUouSW1Hfw8PDw/s4L4lfk+NyG8IOtxw8PDy8Y7wkjGgbC/ZT025UqxgXDw8PL+bNooFkEc83gLZpYMjAw8PD2/L+AFUeAyfvqw1pAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

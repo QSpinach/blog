@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>总结 | QSpinach&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="other">
+    <meta name="description" content="阿里respositoryhttps:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring jar包安装到本地仓库mvn install:install-file -Dfile=D:\commons-logging-1.2.jar -DgroupId=org.apache.commons -DartifactId=commons-logging -Dversion=1.2 -D">
+<meta name="keywords" content="other">
+<meta property="og:type" content="article">
+<meta property="og:title" content="总结">
+<meta property="og:url" content="https:&#x2F;&#x2F;qspinach.github.io&#x2F;blog&#x2F;2020&#x2F;08&#x2F;23&#x2F;%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="QSpinach&#39;blog">
+<meta property="og:description" content="阿里respositoryhttps:&#x2F;&#x2F;maven.aliyun.com&#x2F;repository&#x2F;spring jar包安装到本地仓库mvn install:install-file -Dfile=D:\commons-logging-1.2.jar -DgroupId=org.apache.commons -DartifactId=commons-logging -Dversion=1.2 -D">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-23T15:45:11.821Z">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="QSpinach&#39;blog" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">QSpinach</h5>
+          <a href="mailto:731044462@qq.com" target="_blank" rel="noopener" title="731044462@qq.com" class="mail">731044462@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qspinach" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-08-23T15:45:11.821Z" itemprop="datePublished" class="page-time">
+  2020-08-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#阿里respository"><span class="post-toc-number">1.</span> <span class="post-toc-text">阿里respository</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jar包安装到本地仓库"><span class="post-toc-number">2.</span> <span class="post-toc-text">jar包安装到本地仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#resetful"><span class="post-toc-number">3.</span> <span class="post-toc-text">resetful</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Axure注册"><span class="post-toc-number">4.</span> <span class="post-toc-text">Axure注册</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webstorm-激活"><span class="post-toc-number">5.</span> <span class="post-toc-text">webstorm 激活</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#idea激活"><span class="post-toc-number">6.</span> <span class="post-toc-text">idea激活</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nginx"><span class="post-toc-number">7.</span> <span class="post-toc-text">nginx</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动Android模拟器"><span class="post-toc-number">8.</span> <span class="post-toc-text">启动Android模拟器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#win10-电脑-Ubuntu路径"><span class="post-toc-number">9.</span> <span class="post-toc-text">win10 电脑 Ubuntu路径</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看文件夹被哪个应用使用-任务管理器-》-性能-》资源监视器-》CPU-》关联的句柄-》结束进程"><span class="post-toc-number">10.</span> <span class="post-toc-text">查看文件夹被哪个应用使用 任务管理器 》 性能 》资源监视器 》CPU 》关联的句柄 》结束进程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网页中的视频播放"><span class="post-toc-number">11.</span> <span class="post-toc-text">网页中的视频播放</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在网页中不能复制内容，在body标签中加"><span class="post-toc-number">12.</span> <span class="post-toc-text">在网页中不能复制内容，在body标签中加</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义右键菜单"><span class="post-toc-number">13.</span> <span class="post-toc-text">自定义右键菜单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#windows-电脑查询端口"><span class="post-toc-number">14.</span> <span class="post-toc-text">windows 电脑查询端口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MongoDB"><span class="post-toc-number">15.</span> <span class="post-toc-text">MongoDB</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#npm-更新package-json"><span class="post-toc-number">16.</span> <span class="post-toc-text">npm 更新package.json</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mysql更改root密码"><span class="post-toc-number">17.</span> <span class="post-toc-text">mysql更改root密码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VSCODE"><span class="post-toc-number">18.</span> <span class="post-toc-text">VSCODE</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-08-23 23:45:11" datetime="2020-08-23T15:45:11.821Z"  itemprop="datePublished">2020-08-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="阿里respository"><a href="#阿里respository" class="headerlink" title="阿里respository"></a>阿里respository</h3><p><a href="https://maven.aliyun.com/repository/spring" target="_blank" rel="noopener">https://maven.aliyun.com/repository/spring</a></p>
+<h3 id="jar包安装到本地仓库"><a href="#jar包安装到本地仓库" class="headerlink" title="jar包安装到本地仓库"></a>jar包安装到本地仓库</h3><p>mvn install:install-file -Dfile=D:\commons-logging-1.2.jar -DgroupId=org.apache.commons -DartifactId=commons-logging -Dversion=1.2 -Dpackaging=jar </p>
+<h3 id="resetful"><a href="#resetful" class="headerlink" title="resetful"></a>resetful</h3><p>（1）每一个URI代表一种资源；<br>（2）客户端和服务器之间，传递这种资源的某种表现层；<br>（3）客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。</p>
+<h3 id="Axure注册"><a href="#Axure注册" class="headerlink" title="Axure注册"></a>Axure注册</h3><p>License：zdfans.com<br>Key：gP5uuK2gH+iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7++FF3pAz7dTu8B61ySxli</p>
+<h3 id="webstorm-激活"><a href="#webstorm-激活" class="headerlink" title="webstorm 激活"></a>webstorm 激活</h3><p><a href="http://idea.iteblog.com/key.php" target="_blank" rel="noopener">http://idea.iteblog.com/key.php</a></p>
+<h3 id="idea激活"><a href="#idea激活" class="headerlink" title="idea激活"></a>idea激活</h3><p><a href="http://idea.imsxm.com/" target="_blank" rel="noopener">http://idea.imsxm.com/</a><br><a href="http://intellij.mandroid.cn/" target="_blank" rel="noopener">http://intellij.mandroid.cn/</a><br><a href="http://idea.iteblog.com/key.php" target="_blank" rel="noopener">http://idea.iteblog.com/key.php</a></p>
+<h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><p>./nginx  #打开 nginx<br>nginx -s reload|reopen|stop|quit  #重新加载配置|重启|停止|退出 nginx<br>nginx -t   #测试配置是否有语法错误</p>
+<h3 id="启动Android模拟器"><a href="#启动Android模拟器" class="headerlink" title="启动Android模拟器"></a>启动Android模拟器</h3><p>cd c:&#39;Program Files’\android\tools<br>emulator.exe -netdelay none -netspeed full -avd Pixel_API_25</p>
+<h3 id="win10-电脑-Ubuntu路径"><a href="#win10-电脑-Ubuntu路径" class="headerlink" title="win10 电脑 Ubuntu路径"></a>win10 电脑 Ubuntu路径</h3><p>C:\Users\syq\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs</p>
+<h3 id="查看文件夹被哪个应用使用-任务管理器-》-性能-》资源监视器-》CPU-》关联的句柄-》结束进程"><a href="#查看文件夹被哪个应用使用-任务管理器-》-性能-》资源监视器-》CPU-》关联的句柄-》结束进程" class="headerlink" title="查看文件夹被哪个应用使用 任务管理器 》 性能 》资源监视器 》CPU 》关联的句柄 》结束进程"></a>查看文件夹被哪个应用使用 任务管理器 》 性能 》资源监视器 》CPU 》关联的句柄 》结束进程</h3><h3 id="网页中的视频播放"><a href="#网页中的视频播放" class="headerlink" title="网页中的视频播放"></a>网页中的视频播放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;embed id=&quot;movie_player&quot; name=&quot;movie_player&quot; width=&quot;300&quot; height=&quot;180&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; flashvars=&quot;VideoIDS=XNDA5NTEwMTA0&amp;isAutoPlay=true&amp;isShowRelatedVideo=false&quot; allowfullscreen=&quot;true&quot; quality=&quot;high&quot; bgcolor=&quot;#FFFFFF&quot; src=&quot;http://static.youku.com/v1.0.0098/v/swf/qplayer.swf&quot; type=&quot;application/x-shockwave-flash&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在网页中不能复制内容，在body标签中加"><a href="#在网页中不能复制内容，在body标签中加" class="headerlink" title="在网页中不能复制内容，在body标签中加"></a>在网页中不能复制内容，在body标签中加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onmousemove=&quot;HideMenu()&quot; oncontextmenu=&quot;return false&quot; ondragstart=&quot;return false&quot; onselectstart =&quot;return false&quot; onselect=&quot;document.selection.empty()&quot; oncopy=&quot;document.selection.empty()&quot; onbeforecopy=&quot;return false&quot; onmouseup=&quot;document.selection.empty()</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义右键菜单"><a href="#自定义右键菜单" class="headerlink" title="自定义右键菜单"></a>自定义右键菜单</h3><p>HKEY_CLASSES_ROOT\Directory\background\shell</p>
+<h3 id="windows-电脑查询端口"><a href="#windows-电脑查询端口" class="headerlink" title="windows 电脑查询端口"></a>windows 电脑查询端口</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
+<hr>
+<p>react-router目前用的是3.X版本，4.X版本不适用3.X</p>
+<hr>
+<h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p>启动：<br>mongod –dbpath D:\nodejs\mongodb<br>使用：<br>1、mongo<br>2、show dbs<br>3、use 名字<br>4、查询 db.users.find();</p>
+<hr>
+<h3 id="npm-更新package-json"><a href="#npm-更新package-json" class="headerlink" title="npm 更新package.json"></a>npm 更新package.json</h3><p>1、npm install -g npm-check-updates <strong><strong><strong>***</strong></strong></strong><br>   npm-check-updates<br>   ncu -a<br>2、npm install -g npm-check<br>   npm-check -u</p>
+<hr>
+<h3 id="mysql更改root密码"><a href="#mysql更改root密码" class="headerlink" title="mysql更改root密码"></a>mysql更改root密码</h3><ol>
+<li><p>停止mysql数据库<br>/etc/init.d/mysqld stop</p>
+</li>
+<li><p>执行如下命令<br>mysqld_safe –user=mysql –skip-grant-tables –skip-networking &amp;</p>
+</li>
+<li><p>使用root登录mysql数据库<br>mysql -u root mysql</p>
+</li>
+<li><p>更新root密码<br>mysql&gt; UPDATE user SET Password=PASSWORD(‘newpassword’) where USER=’root’;</p>
+</li>
+</ol>
+<p>最新版MySQL请采用如下SQL：<br>mysql&gt; UPDATE user SET authentication_string=PASSWORD(‘newpassword’) where USER=’root’;</p>
+<ol start="5">
+<li><p>刷新权限<br>mysql&gt; FLUSH PRIVILEGES;</p>
+</li>
+<li><p>退出mysql<br>mysql&gt; quit</p>
+</li>
+<li><p>重启mysql<br>/etc/init.d/mysqld restart</p>
+</li>
+<li><p>使用root用户重新登录mysql<br>mysql -uroot -p<br>Enter password: &lt;输入新设的密码newpassword&gt;</p>
+</li>
+</ol>
+<hr>
+<h3 id="VSCODE"><a href="#VSCODE" class="headerlink" title="VSCODE"></a>VSCODE</h3><p>插件——-</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Beautify</span><br><span class="line">ESLint</span><br><span class="line">GitLens-Git supercharged</span><br><span class="line">Live Server</span><br><span class="line">Power Mode</span><br><span class="line">Vetur</span><br><span class="line">vscode-icons</span><br><span class="line">Vue 2 Snippets</span><br></pre></td></tr></table></figure>
+<p>配置——-</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;editor.tabSize&quot;: 2,</span><br><span class="line">    &quot;javascript.implicitProjectConfig.experimentalDecorators&quot;: true,</span><br><span class="line">    &quot;liveServer.settings.donotShowInfoMsg&quot;: true,</span><br><span class="line">    &quot;workbench.iconTheme&quot;: &quot;vscode-icons&quot;,</span><br><span class="line">    &quot;powermode.enabled&quot;: true,</span><br><span class="line">    // &quot;powermode.presets&quot;: &quot;fireworks&quot;,</span><br><span class="line">    &quot;powermode.presets&quot;: &quot;flames&quot;,</span><br><span class="line">    &quot;powermode.enableShake&quot;: false,</span><br><span class="line">    &quot;workbench.colorCustomizations&quot;: &#123;</span><br><span class="line">        &quot;editorWhitespace.foreground&quot;: &quot;#FFFFFF00&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;window.zoomLevel&quot;: 0,</span><br><span class="line">    &quot;extensions.ignoreRecommendations&quot;: true,</span><br><span class="line">    &quot;emmet.syntaxProfiles&quot;: &#123;</span><br><span class="line">        &quot;vue-html&quot;: &quot;html&quot;,</span><br><span class="line">        &quot;vue&quot;: &quot;html&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;vetur.validation.template&quot;: false,</span><br><span class="line">    &quot;eslint.options&quot;: &#123;</span><br><span class="line">        &quot;plugins&quot;: [&quot;html&quot;]</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;eslint.validate&quot;: [</span><br><span class="line">        &quot;javascript&quot;,</span><br><span class="line">        &quot;javascriptreact&quot;,</span><br><span class="line">        &quot;html&quot;,</span><br><span class="line">        &quot;vue&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;vetur.format.defaultFormatter.html&quot;: &quot;js-beautify-html&quot;,</span><br><span class="line">    &quot;vetur.format.defaultFormatterOptions&quot;: &#123;</span><br><span class="line">        &quot;wrap_attributes&quot;: &quot;force-aligned&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>=============================================================<br>微信签名<br>微信开发者<br>wx1338c897ca2c4cd5<br>9ce8ae04c9c392eb3a8bf601d1faf30d<br>获取token<br><a href="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx1338c897ca2c4cd5&amp;secret=9ce8ae04c9c392eb3a8bf601d1faf30d" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid=wx1338c897ca2c4cd5&amp;secret=9ce8ae04c9c392eb3a8bf601d1faf30d</a><br>获取ticket<br><a href="https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&amp;type=jsapi" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=ACCESS_TOKEN&amp;type=jsapi</a><br>获取签名<br>随机数：88646b78-e92f-4ef0-bb8f-22c6f0662488<br>时间戳：1542767511<br>地址：<a href="http://wx.guanxiaohe.cn/index.html" target="_blank" rel="noopener">http://wx.guanxiaohe.cn/index.html</a><br>获取签名地址：<br><a href="https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-08-23T15:45:11.821Z" itemprop="dateUpdated">2020-08-23 23:45:11</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://qspinach.github.io/blog">
+            <img src="/blog/img/avatar.jpg" alt="QSpinach">
+            QSpinach
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/other/" rel="tag">other</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&title=《总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&title=《总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2020/08/23/%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">搭建vue项目</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2020/08/23/vue%E6%80%BB%E7%BB%93/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>QSpinach &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&title=《总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&title=《总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3awY7CMAxF0f7/T3cktohy30sZqc7NClEGfLLwOHaOA6/zta7fP9/W+/v8G45fLBkyZDyWcV6uTz9GeO9Pr//2egs+xSZDhox9GGky5QF1T3lsMmTIkEEKOPKUFJEyZMiQcVfC7X7sOlwZMmTIIAxS/PGGGi8NeXK/7SwuQ4aMBzLSwcB/vv7hfEOGDBkPYZzh6pJjNxYNopIhQ8ZoRne85OMBnr7TohPtigwZMkYwSHLk6TXeP3wt7MsGyZAhYzSDfygdOq4ERLY1mG/IkCFjBIMH3TXo7x2RBs04GTJkDGKQESMZQPIWGx9wBk9lyJCxASNuxINUSIK4aywhQ4aM2Qx+OCTNtbTUSy9hfEnuMmTIGM3ggfLQuxHpyvbJkCFjNmNl9HhXiZkmYhkyZOzAWP9JUgKST6YH4/IULkOGjIczeDGXttj4sIGPQj8mXBkyZAxlpMfXdGzZDRKCeGTIkDGakRZ83UE0vUKxktZlyJCxDyMt2nhXj7fzylagDBkyxjHS8o43wtYT98GXDBkyNmB0JRrfgrSpR/AyZMjYh8HLtTTV8nHmSsNOhgwZOzBWLnJ1jf50AIC2TIYMGaMZ3TmxO6zy/wApWIYMGTsweFgrna7uG4L9liFDxgaMNMmm3xBfm+CncBkyZMj42fCyS9nBlEOGDBnbM/jljA4Tl5syZMjYgNFd5+LDAF5udlc3ZMiQMZvRHSC7pv/K8bhL+jJkyHg44w/F30HPVTB7zwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

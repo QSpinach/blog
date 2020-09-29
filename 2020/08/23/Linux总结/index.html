@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Linux总结 | QSpinach&#39;blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Linux">
+    <meta name="description" content="命令1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677sudo apt-get update 更新软件源cd 进入某文件夹 cd - 快速回到上传路径ls 显示">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux总结">
+<meta property="og:url" content="https:&#x2F;&#x2F;qspinach.github.io&#x2F;blog&#x2F;2020&#x2F;08&#x2F;23&#x2F;Linux%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="QSpinach&#39;blog">
+<meta property="og:description" content="命令1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677sudo apt-get update 更新软件源cd 进入某文件夹 cd - 快速回到上传路径ls 显示">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-03T01:27:40.875Z">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="QSpinach&#39;blog" href="/blog/atom.xml">
+    
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/blog/img/brand.jpg)">
+      <div class="brand">
+        <a href="/blog/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/blog/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">QSpinach</h5>
+          <a href="mailto:731044462@qq.com" target="_blank" rel="noopener" title="731044462@qq.com" class="mail">731044462@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/blog/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qspinach" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Linux总结</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Linux总结</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-08-23T15:45:11.788Z" itemprop="datePublished" class="page-time">
+  2020-08-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vim操作"><span class="post-toc-number">2.</span> <span class="post-toc-text">vim操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centos安装ss"><span class="post-toc-number">3.</span> <span class="post-toc-text">centos安装ss</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mysql"><span class="post-toc-number">4.</span> <span class="post-toc-text">mysql</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-Ubuntu-系统安装-Redis-可以使用以下命令"><span class="post-toc-number">5.</span> <span class="post-toc-text">在 Ubuntu 系统安装 Redis 可以使用以下命令:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tomcat"><span class="post-toc-number">6.</span> <span class="post-toc-text">tomcat</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sftp"><span class="post-toc-number">7.</span> <span class="post-toc-text">sftp</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Linux总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Linux总结</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-08-23 23:45:11" datetime="2020-08-23T15:45:11.788Z"  itemprop="datePublished">2020-08-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update 更新软件源</span><br><span class="line">cd 进入某文件夹 cd - 快速回到上传路径</span><br><span class="line">ls 显示目录下所有文件</span><br><span class="line">mkdir 创建文件夹 mkdir a/b/c/d -p 创建文件夹</span><br><span class="line">touch 创建文件</span><br><span class="line">pwd 显示当前目录地址</span><br><span class="line">q 退出当前（man ls ）</span><br><span class="line">clear 清除终端显示信息</span><br><span class="line">tab键 自动补全文件名</span><br><span class="line">cat 查看文件内容 小文件适用</span><br><span class="line">history 显示历史命令</span><br><span class="line">! + 历史命令行号 执行对应命令</span><br><span class="line">rm 删除文件或文件夹 rm -r 递归地删除目录下的内容 删除文件夹</span><br><span class="line">rmdir 只能删非空文件夹</span><br><span class="line"></span><br><span class="line">* 是通配符（ls 2* 显示以2开头文件或目录)</span><br><span class="line">？是通配符（ls 2? 显示以2开头的两位名文件或目录）</span><br><span class="line">[] 通配符 （ls 1[1-5]3.txt 显示指定范围的文件和文件夹）</span><br><span class="line">&gt; 重定向 （ls &gt; xxx.txt 如果有xxx.txt文件，先删除xxx.txt内容删掉，再把显示在终端的信息放到文件里面。如果没有就直接生成文件再添加内容）</span><br><span class="line">&gt;&gt; 重定向追加 （ls &gt;&gt; xxx.txt 把内容放到文件里面的末尾）</span><br><span class="line">more 查看文件内容 （f往下翻， b往回撤 ） 大文件适用</span><br><span class="line">| 管道 （ls -alh /bin | more）将显示的内容分页显示 通过 | 进行分流</span><br><span class="line">ctrl + c 终止</span><br><span class="line">mv 源文件名 新文件名 (重命名文件或文件夹)</span><br><span class="line">mv 源文件 文件夹路径 剪切并粘贴到文件路径</span><br><span class="line">cp 文件 文件路径 复制粘贴， cp -r 复制粘贴文件夹</span><br><span class="line">ln -s 对谁创建快捷方式 创建后的文件名 （软链接）</span><br><span class="line">ln 对谁创建快捷方式 创建后的文件名 （硬链接） 删除原文件不影响创建后的文件</span><br><span class="line">ls -lh 查看文件的链接数</span><br><span class="line">grep -n &quot;ntfs&quot; xxx.txt 在xxx.txt文件中查找ntfs， -n是显示行号，-v 显示不包含ntfs的内容</span><br><span class="line"></span><br><span class="line">:wq 保存退出 :q! 不保存退出</span><br><span class="line"></span><br><span class="line">tar -cvf test.tar *py 打包所有py文件倒test.tar</span><br><span class="line">tar -xvf test.tar 解包</span><br><span class="line">tar -zcvf xxx.tar.gz *py 压缩 -C /dongge 指定路径</span><br><span class="line">tar -zxvf xxx.tar.gz 解压</span><br><span class="line">tar -jcvf yyy.tar.bz2 *py 压缩</span><br><span class="line">zip zzz.zip *py</span><br><span class="line">unzip zzz.zip, unzip -d /test4 zzz.zip 解压到指定路径</span><br><span class="line"></span><br><span class="line">wich ls 查看命令所在的文件路径</span><br><span class="line"></span><br><span class="line">cal 打印日历 -y 2018 打印2018年日历</span><br><span class="line">date &quot;+%Y-%m-%d&quot; 打印时间</span><br><span class="line"></span><br><span class="line">ps -aux 显示进程</span><br><span class="line">top 动态显示进程</span><br><span class="line">top 显示进程</span><br><span class="line">ps -ef|grep tomcat 查找相应进程</span><br><span class="line">kill -9 9909 杀死进程， -9 强制杀死进程</span><br><span class="line"></span><br><span class="line">reboot 重启</span><br><span class="line">shutdown -h （now或10或 20:20） 关机 指定时间</span><br><span class="line"></span><br><span class="line">df -h 查看硬盘使用情况</span><br><span class="line">du -h 显示当前路径使用情况</span><br><span class="line">ifconfig 显示网络信息</span><br><span class="line">ping 检查是否能网络连通</span><br><span class="line"></span><br><span class="line">sudo useradd shuaige -m 创建用户</span><br><span class="line">cat /etc/passwd 查看有多少账户</span><br><span class="line">su shuaige 切换shuaige用户</span><br><span class="line">sudo passwd shuaige 更新密码</span><br><span class="line">ssh python@172.16.7.139 远程登录电脑</span><br><span class="line">whoami 显示当前登录用户</span><br><span class="line">exit 退出当前用户</span><br><span class="line"></span><br><span class="line">文件权限</span><br><span class="line">rwx 可读 可写 可执行 </span><br><span class="line">r-- 只能读</span><br><span class="line">r-x 可读 可执行 但是不能写</span><br><span class="line"></span><br><span class="line">chmod u=rwx 2.py 修改权限 拥有者u</span><br><span class="line">chmod g=rwx 2.py 修改权限 同组者g</span><br><span class="line">chmod o=rwx 2.py 修改权限 其他o</span><br><span class="line">777</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="vim操作"><a href="#vim操作" class="headerlink" title="vim操作"></a>vim操作</h3><p>————————vim————————————-</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">i 光标前插入</span><br><span class="line">a 光标后插入</span><br><span class="line">esc 退出编辑模式</span><br><span class="line">:wq 保存并退出</span><br><span class="line">o 下一行插入</span><br><span class="line">I 行首</span><br><span class="line">A 行尾</span><br><span class="line">O 上一行插入</span><br><span class="line">yy 复制光标所在一行</span><br><span class="line">4yy 复制光标所在的行开始向下4行</span><br><span class="line">p 粘贴</span><br><span class="line">dd 剪切 删除光标所在的行</span><br><span class="line">2dd 剪切 删除光标所在的行往下2行</span><br><span class="line">D 剪切当前行光标后的所有内容</span><br><span class="line">d0 剪切当前行光标前的所有内容</span><br><span class="line">x 删除光标后的内容</span><br><span class="line">X 删除光标前的内容</span><br><span class="line">h 左 j下 k上 l右</span><br><span class="line">H 当前屏幕的上方</span><br><span class="line">M 当前屏幕中间</span><br><span class="line">L 当前屏幕的下方</span><br><span class="line"></span><br><span class="line">Ctrl + f 向下翻一页</span><br><span class="line">Ctrl + b 向上翻一页</span><br><span class="line">Ctrl + d 向下翻半屏</span><br><span class="line">Ctrl + u 向上翻半屏</span><br><span class="line"></span><br><span class="line">2G 快速定位到第二行</span><br><span class="line">G 快速调到整个代码的最后一行</span><br><span class="line">gg 快速回到整个代码的第一行</span><br><span class="line"></span><br><span class="line">w 向后跳一个单词的长度， 即跳到下一个单词的开始处</span><br><span class="line">b 向前跳一个单词的长度， 即跳到上一个单词的开始处</span><br><span class="line"></span><br><span class="line">u 撤销刚刚的操作</span><br><span class="line">Ctrl + r 反撤销</span><br><span class="line"></span><br><span class="line">v 选择</span><br><span class="line">V 选择光标经过的行</span><br><span class="line"></span><br><span class="line">&gt;&gt; 向右移动代码</span><br><span class="line">&lt;&lt; 向左移动代码</span><br><span class="line"></span><br><span class="line">. 重复执行上一次的命令</span><br><span class="line"></span><br><span class="line">/hello 查找hello</span><br><span class="line">n 下一个hello</span><br><span class="line">N 上一个hello</span><br><span class="line"></span><br><span class="line">r 替换一个字符</span><br><span class="line">R 替换光标以及后边的字符</span><br><span class="line">:%s/abc/123/g abc全部替换为123</span><br><span class="line">:1, 10s/abc/123/g 第一行到第10行的abc全部替换为123</span><br><span class="line"></span><br><span class="line">shift + zz 相当于wq</span><br><span class="line"></span><br><span class="line">末行模式</span><br><span class="line">w 保存</span><br><span class="line">q 退出</span><br><span class="line">wq 保存并退出</span><br></pre></td></tr></table></figure>
+<hr>
+<p>======================================================</p>
+<h3 id="centos安装ss"><a href="#centos安装ss" class="headerlink" title="centos安装ss"></a>centos安装ss</h3><p>1、安装应用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install python-setuptools</span><br><span class="line">easy_install pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
+
+<p>2、配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">mkdir /etc/shadowsocks</span><br><span class="line">vim /etc/shadowsocks/ss.json</span><br><span class="line">// 单用户</span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:9000,           //服务端口</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,          //服务密码</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,      //加密方式</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;workers&quot;: 1</span><br><span class="line">&#125;</span><br><span class="line">// 多用户一定要开启防火墙端口号</span><br><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:9000,           //服务端口</span><br><span class="line">    &quot;port_passowrd&quot;: &#123;</span><br><span class="line">    	&quot;9000&quot;:&quot;123456&quot;,</span><br><span class="line">    	&quot;9001&quot;:&quot;12345678&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;:1080,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,      //加密方式</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、运行<br>此方法可能无效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssserver -c /etc/shadowsocks/ss.json -d start </span><br><span class="line">ssserver -c /etc/shadowsocks/ss.json -d stop       //停止</span><br><span class="line">ssserver -c /etc/shadowsocks/ss.json -d restart    //重启</span><br></pre></td></tr></table></figure>
+
+<p>推荐使用以下方式运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/ss.service</span><br><span class="line">[Unit]</span><br><span class="line">Description=Shadowsocks Server</span><br><span class="line">After=network.target</span><br><span class="line">[Service]</span><br><span class="line">PermissionsStartOnly=true</span><br><span class="line">ExecStartPre=/bin/mkdir -p /run/shadowsocks</span><br><span class="line">ExecStartPre=/bin/chown nobody:nobody /run/shadowsocks</span><br><span class="line">ExecStart=/usr/bin/ssserver -c /etc/shadowsocks/ss.json #之前的配置地址</span><br><span class="line">Restart=on-abort</span><br><span class="line">User=nobody</span><br><span class="line">Group=nobody</span><br><span class="line">UMask=0027</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"></span><br><span class="line">运行服务并设置开机自启：</span><br><span class="line">systemctl start ss</span><br><span class="line">systemctl enable ss</span><br></pre></td></tr></table></figure>
+
+<p>4、注意<br>防火墙需要开启端口号9000，修改过后重启防火墙才能生效<br>systemctl start firewalld.service（开启防火墙）<br>systemctl stop firewalld.service（停用防火墙）<br>service firewalld restart（重启防火墙）<br>firewall-cmd –zone=public –add-port=9000/udp –permanen(指定端口范围为9000通过防火墙)<br>firewall-cmd –zone=public –add-port=9000/tcp –permanen(指定端口范围为9000通过防火墙)<br>firewall-cmd –reload</p>
+<p>window使用shadowsocks<br>1、安装shadowsocks，地址在github上搜sadowsocks-window<br>2、配置一下服务器地址，服务器端口，密码以及加密方式（与服务器对应）<br>3、启动系统代理，PAC模式和全局模式都可以，PAC模式一般是被代理被墙了的</p>
+<p>// <a href="https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks" target="_blank" rel="noopener">https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks</a></p>
+<hr>
+<p>======================================================</p>
+<h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><p>  安装<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server</span><br><span class="line">sudo apt isntall mysql-client</span><br><span class="line">sudo apt install libmysqlclient-dev</span><br></pre></td></tr></table></figure><br>  启动service mysql start</p>
+<p>  关闭service mysql stop</p>
+<p>  重启service mysql restart</p>
+<p>  mysql -uroot -p syqroot</p>
+<p>  现在设置mysql允许远程访问，首先编辑文件/etc/mysql/mysql.conf.d/mysqld.cnf：<br>    sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf<br>    注释掉bind-address = 127.0.0.1：</p>
+<hr>
+<p>======================================================</p>
+<h3 id="在-Ubuntu-系统安装-Redis-可以使用以下命令"><a href="#在-Ubuntu-系统安装-Redis-可以使用以下命令" class="headerlink" title="在 Ubuntu 系统安装 Redis 可以使用以下命令:"></a>在 Ubuntu 系统安装 Redis 可以使用以下命令:</h3><p>$sudo apt-get update<br>$sudo apt-get install redis-server<br>启动 Redis<br>$ redis-server<br>查看 redis 是否启动？<br>$ redis-cli<br>以上命令将打开以下终端：</p>
+<p>redis 127.0.0.1:6379&gt;<br>127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在我们输入 PING 命令。</p>
+<p>flushall ——&gt; 清空整个 Redis 服务器的数据(删除所有数据库的所有 key )</p>
+<p>flushdb ——&gt; 清空当前数据库中的所有 key</p>
+<p>redis 127.0.0.1:6379&gt; ping<br>PONG<br>以上说明我们已经成功安装了redis。</p>
+<p>如果是用apt-get或者yum install安装的redis，可以直接通过下面的命令停止/启动/重启redis</p>
+<p>/etc/init.d/redis-server stop<br>/etc/init.d/redis-server start<br>/etc/init.d/redis-server restart<br>如果是通过源码安装的redis，则可以通过redis的客户端程序redis-cli的shutdown命令来重启redis</p>
+<p>redis-cli -h 127.0.0.1 -p 6379 shutdown<br>如果上述方式都没有成功停止redis，则可以使用终极武器 kill -9</p>
+<p>/usr/local/redis/bin/redis-cli </p>
+<hr>
+<p>=====================================================</p>
+<h3 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h3><p>查看输出logs<br>tail -f catalina.out<br>查看tomcat进程<br>ps -ef | grep tomcat</p>
+<hr>
+<p>==================================================<br>腾讯云服务器<br>+———————————————————————-<br>| YJCOM [ EASY CLOUD EASY WEBSITE]” &gt;&gt; $README<br>+———————————————————————-<br>| Copyright (c) 2015 <a href="http://yjcom.com" target="_blank" rel="noopener">http://yjcom.com</a> All rights reserved.<br>+———————————————————————-</p>
+<p>nginx         /usr/local/nginx<br>tomcat6        /var/tomcat/tomcat-6<br>tomcat7        /var/tomcat/tomcat-7<br>tomcat8        /var/tomcat/tomcat-8<br>mysql5.6    /var/lib/mysql</p>
+<p>./tomcat.sh stop|start</p>
+<p>mysql:        service mysql (start|stop|restart)<br>vsftpd:        service vsftpfd (start|stop|restart)<br>nginx:        service nginx (start|stop|restart)</p>
+<p>www ftp directory    /yjdata/www/www/</p>
+<p>change tomcat version for the default site<br>/yjdata/www/www/change_tomcat_version.sh 6|7|8</p>
+<p>change jdk version for the default site<br>/yjdata/www/www/change_jdk_version.sh 1.6|1.7|1.8</p>
+<p>======================================================================</p>
+<hr>
+<p>netstat -ntlp //查看当前所有tcp端口·</p>
+<p>netstat -ntulp |grep 80 //查看所有80端口使用情况·</p>
+<p>netstat -an | grep 3306 //查看所有3306端口使用情况·</p>
+<h3 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h3><p>登录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sftp -P [port] [user]@[ip]</span><br></pre></td></tr></table></figure>
+<p>get 取得远程服务器上的指定文件</p>
+<p>put 上传本地指定的文件到远程服务器上</p>
+<p>示例:</p>
+<p>get -r ./* /Users/voidcc.com/本地项目目录/</p>
+<p>从远程下载所有文件及文件夹到本地项目目录</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-09-03T01:27:40.875Z" itemprop="dateUpdated">2020-09-03 09:27:40</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://qspinach.github.io/blog">
+            <img src="/blog/img/avatar.jpg" alt="QSpinach">
+            QSpinach
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&title=《Linux总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&title=《Linux总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/blog/2020/08/23/css%E6%80%BB%E7%BB%93/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">css总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/blog/2020/08/23/React%E5%AD%A6%E4%B9%A0/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">React学习</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>QSpinach &copy; 2019 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&title=《Linux总结》 — QSpinach'blog&pic=https://qspinach.github.io/blog/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&title=《Linux总结》 — QSpinach'blog&source=个人收集，个人总结" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux总结》 — QSpinach'blog&url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/&via=https://qspinach.github.io/blog" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qspinach.github.io/blog/2020/08/23/Linux%E6%80%BB%E7%BB%93/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3asW7rMAwF0P7/T7dLhwek9ruXkgwPx1NgOI6OBpEh+fUVX9//XJ/3Pz9f3bl/2/17rp7fcOHh4eEtLP3zSpZ+//l+ucl1/+ar5/Hw8PBO8+4P6PbV91uTn+F5ELq8j4eHh/cyXrvEFt9uGR4eHt7beHuT4+Q+Hh4e3pt5+YKSQ/zqW226/GitBQ8PDy/m5WWC93w+0t/Dw8PDW+6qJ0XVtln1TMPs9w14eHh4B3grDa08wV1phs3GsPDw8PDO8WYl12SJ68WCJDz8J/Dg4eHhPcjLm/pJErx3HKH4Lh4eHt4BXtKGn7X/kxGEGaYdbsDDw8Pby2uT1DZUtGGjDSp4eHh4z/NW0uVZ4ruSjq+8Ew8PD28XL2/w13n6aCxg11hYEUnw8PDwRry23JC09tdz2jyJr2ci8PDw8JZ5K22tJOHO21cr7bHLoSs8PDy8A7xdP58PSJ0OG3h4eHjneLOiwwomb2LNkul6MgIPDw9vmTdLo9vDPWlltU/i4eHhPcNrx6Rm1dFkyKBtbkVIPDw8vMO8lWZ/W2Zt2fmIw2VgwMPDwzvGy8sESTiZJcQbSrd4eHh4h3nrh35bzrhf+izA/LEGPDw8vGO8tu10/622fTUbtIo2CA8PD+8Ab29IyO/nYWBWwMXDw8M7zVsZC9h1p23CFY03PDw8vMO8PEmd/Xx+rLfp/uVK8PDw8I7xklLsffBoxw5mpYc6sOHh4eFt5X2XV97WSjYlT7vzrYmq1Hh4eHgLvPbwbUuueeCZtcfWgwoeHh7ejNcOBOza0fa7eTpeJNZ4eHh4C7y2uJCn2vmm5E24utaCh4eH92Jee+jPeEWTDA8PD+8FvOT52ZBB8p4kucfDw8N7hjcrRqxvR1t0qH8LDw8P7wCv/cOfLKUdBWiHEjZ3+fDw8PBS3g99V/4rvPfmMQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/blog/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
