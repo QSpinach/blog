@@ -37,3 +37,8 @@ server {
           proxy_pass http://rap2api.taobao.org/app/mock/122795;
     }
 }
+
+### nginx查看访问量最高的ip地址
+```bash
+awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -nr -k1 | head -n 10
+```
