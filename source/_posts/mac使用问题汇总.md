@@ -28,13 +28,14 @@ nginx -s stop
 
 ### 如何安装homebrew
 国内安装
-```
+```ssh
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
 官方安装
 ```
  $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" 
 ```
+
 也可以加速克隆
 ```
 BREW_REPO="https://github.com/Homebrew/brew"
@@ -58,6 +59,7 @@ git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna
 # 更换后测试工作是否正常
 brew update
 ```
+
 恢复
 ```
 # brew 程序本身，Homebrew/Linuxbrew 相同
@@ -74,4 +76,11 @@ git -C "$(brew --repo homebrew/core)" remote set-url origin https://github.com/H
 
 # 更换后测试工作是否正常
 brew update
+```
+### 如何展示隐藏文件及文件夹
+
+```
+# 关闭显示隐藏文件的话就把上面的命令中YES改为NO就行了
+defaults write com.apple.Finder AppleShowAllFiles YES
+killall Finder
 ```
