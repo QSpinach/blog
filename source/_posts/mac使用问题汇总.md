@@ -84,3 +84,27 @@ brew update
 defaults write com.apple.Finder AppleShowAllFiles YES
 killall Finder
 ```
+
+### 安装 webstorm 2020.3.2
+```
+# 删除配置信息目录
+
+rm -rf ~/Library/Preferences/WebStorm*
+
+# 删除插件信息目录
+
+rm -rf ~/Library/Application\ Support/WebStorm*
+
+# 缓存信息目录
+
+rm -rf ~/Library/Caches/WebStorm*
+
+# 删除日志信息目录
+
+rm -rf ~/Library/Logs/WebStorm*
+
+# 删除Webstorm.vmoptions
+cd /Users/leitianxiao/Library/Application\ Support//JetBrains/Webstorm2020.2/Webstorm.vmoptions
+
+rm -f  Webstorm.vmoptions
+```
