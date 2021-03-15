@@ -95,3 +95,17 @@ git 这个分支bug没改完切换到其他分支改bug，再切会来继续改b
 6、执行 $ git stash list 命令，查看 stash 列表
 7、执行 $ git stash apply stash@{0} 命令，恢复 id 为 4240c0c 的 stash 的内容
 8、执行 $ git stash drop stash@{0} 命令，删除 stash 列表中已经恢复的 id 为 4240c0c 的 stash 记录
+
+
+正常clone方式
+git clone <远程仓库地址>
+
+默认clone的是远程仓库的master分支
+
+clone指定分支
+git clone -b <分支名> <远程仓库名> 
+
+在本地创建该分支的文件夹，且只包含该远程仓库的该分支下所有文件，其他分支文件不会包含
+
+拉代码之前先输入这个命令
+git config --global credential.helper store

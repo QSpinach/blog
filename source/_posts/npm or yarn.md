@@ -10,6 +10,9 @@ toc: true
 
 ```
 $ curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash
+$ curl --silent --location https://deb.nodesource.com/setup_10.x | sudo bash
+
+
 $ yum install -y nodejs
 ```
 ### nvm 安装node

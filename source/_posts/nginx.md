@@ -42,3 +42,11 @@ server {
 ```bash
 awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -nr -k1 | head -n 10
 ```
+
+### nginx 配置多个文件
+```
+include vhost/*.conf;
+```
+
+
+
