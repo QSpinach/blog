@@ -10,6 +10,7 @@ toc: true
 
 ```
 $ curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash
+$ curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash
 $ curl --silent --location https://deb.nodesource.com/setup_10.x | sudo bash
 
 
@@ -77,6 +78,17 @@ yarn config get registry
 yarn config set registry http://registry.npm.taobao.org/
 ```
 
+### 发布自己的包
+1. 注册npm账号
+2. 登录npm账号
+`npm login` 找到需要发布的包根目录下
+3. 发布包
+`npm publish` 直接发布
+4. 删除已发布的包
+`npm unpublish 包名 --force` 
+只能删除72小时内发布的包。删除的包，在24小时内不允许重复发布。发布包需谨慎，不要发布无意义的包。
+
+
 ### 解决的一些问题
 1. @vue/cli 创建项目是安装chromedriver时失败的问题
 此方法是单独安装chromdriver
@@ -115,3 +127,5 @@ yarn config set sass-binary-site http://npm.taobao.org/mirrors/node-sass
 ```
 npm install -global -production windows-build-tools
 ```
+
+
