@@ -21,15 +21,15 @@
     
     
     <meta name="keywords" content="npm,yarn">
-    <meta name="description" content="centos7 下安装nodejs12345$ curl --silent --location https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_10.x | sudo bash$ yum install -y nodejs nvm">
+    <meta name="description" content="centos7 下安装nodejs123456$ curl --silent --location https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location">
 <meta name="keywords" content="npm,yarn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm or yarn">
 <meta property="og:url" content="https:&#x2F;&#x2F;qspinach.github.io&#x2F;blog&#x2F;2020&#x2F;08&#x2F;23&#x2F;npm%20or%20yarn&#x2F;index.html">
 <meta property="og:site_name" content="QSpinach&#39;blog">
-<meta property="og:description" content="centos7 下安装nodejs12345$ curl --silent --location https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_10.x | sudo bash$ yum install -y nodejs nvm">
+<meta property="og:description" content="centos7 下安装nodejs123456$ curl --silent --location https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_8.x | sudo bash$ curl --silent --location">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-15T09:15:07.950Z">
+<meta property="og:updated_time" content="2021-09-11T17:15:16.857Z">
 <meta name="twitter:card" content="summary">
     
         <link rel="alternate" type="application/atom+xml" title="QSpinach&#39;blog" href="/blog/atom.xml">
@@ -149,7 +149,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centos7-下安装nodejs"><span class="post-toc-number">1.</span> <span class="post-toc-text">centos7 下安装nodejs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nvm-安装node"><span class="post-toc-number">2.</span> <span class="post-toc-text">nvm 安装node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用nvm下载node"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用nvm下载node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NPM设置淘宝镜像"><span class="post-toc-number">4.</span> <span class="post-toc-text">NPM设置淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Yarn-设置淘宝镜像"><span class="post-toc-number">5.</span> <span class="post-toc-text">Yarn 设置淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决的一些问题"><span class="post-toc-number">6.</span> <span class="post-toc-text">解决的一些问题</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centos7-下安装nodejs"><span class="post-toc-number">1.</span> <span class="post-toc-text">centos7 下安装nodejs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nvm-安装node"><span class="post-toc-number">2.</span> <span class="post-toc-text">nvm 安装node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用nvm下载node"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用nvm下载node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NPM设置淘宝镜像"><span class="post-toc-number">4.</span> <span class="post-toc-text">NPM设置淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Yarn-设置淘宝镜像"><span class="post-toc-number">5.</span> <span class="post-toc-text">Yarn 设置淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布自己的包"><span class="post-toc-number">6.</span> <span class="post-toc-text">发布自己的包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决的一些问题"><span class="post-toc-number">7.</span> <span class="post-toc-text">解决的一些问题</span></a></li></ol>
         </nav>
     </aside>
 
@@ -173,7 +173,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="centos7-下安装nodejs"><a href="#centos7-下安装nodejs" class="headerlink" title="centos7 下安装nodejs"></a>centos7 下安装nodejs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash</span><br><span class="line">$ curl --silent --location https://deb.nodesource.com/setup_10.x | sudo bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ yum install -y nodejs</span><br></pre></td></tr></table></figure>
+            <h3 id="centos7-下安装nodejs"><a href="#centos7-下安装nodejs" class="headerlink" title="centos7 下安装nodejs"></a>centos7 下安装nodejs</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash</span><br><span class="line">$ curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash</span><br><span class="line">$ curl --silent --location https://deb.nodesource.com/setup_10.x | sudo bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$ yum install -y nodejs</span><br></pre></td></tr></table></figure>
 <h3 id="nvm-安装node"><a href="#nvm-安装node" class="headerlink" title="nvm 安装node"></a>nvm 安装node</h3><p>根据提示设置nvm路径和nodejs路径<br>node下载源</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm node_mirror https://npm.taobao.org/mirrors/node/</span><br></pre></td></tr></table></figure>
 <p>npm下载源</p>
@@ -206,6 +206,12 @@
 
 </li>
 </ol>
+<h3 id="发布自己的包"><a href="#发布自己的包" class="headerlink" title="发布自己的包"></a>发布自己的包</h3><ol>
+<li>注册npm账号</li>
+<li>登录npm账号<br><code>npm login</code> 找到需要发布的包根目录下</li>
+<li>发布包<br><code>npm publish</code> 直接发布</li>
+<li>删除已发布的包<br><code>npm unpublish 包名 --force</code><br>只能删除72小时内发布的包。删除的包，在24小时内不允许重复发布。发布包需谨慎，不要发布无意义的包。</li>
+</ol>
 <h3 id="解决的一些问题"><a href="#解决的一些问题" class="headerlink" title="解决的一些问题"></a>解决的一些问题</h3><ol>
 <li>@vue/cli 创建项目是安装chromedriver时失败的问题<br>此方法是单独安装chromdriver<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install chromedriver --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver</span><br></pre></td></tr></table></figure>
 所以可以在给npm和yarn设置chromedriver源<br>设置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver</span><br></pre></td></tr></table></figure>
@@ -218,6 +224,9 @@
 </ol>
 <p>管理员身份运行cmd 安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -global -production windows-build-tools</span><br></pre></td></tr></table></figure>
+
+
+
         </div>
 
         <blockquote class="post-copyright">
@@ -225,7 +234,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-03-15T09:15:07.950Z" itemprop="dateUpdated">2021-03-15 17:15:07</time>
+    最后更新时间：<time datetime="2021-09-11T17:15:16.857Z" itemprop="dateUpdated">2021-09-12 01:15:16</time>
 </span><br>
 
 
@@ -303,18 +312,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/blog/2020/08/23/hexo/" id="post-prev" class="post-nav-link">
+      <a href="/blog/2020/08/23/nginx/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Hexo</h4>
+        <h4 class="title">nginx</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/blog/2020/08/23/js%E6%80%BB%E7%BB%93/" id="post-next" class="post-nav-link">
+      <a href="/blog/2020/08/23/mysql/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">js总结</h4>
+        <h4 class="title">mysql</h4>
       </a>
     </div>
   
